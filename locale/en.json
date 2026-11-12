@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Session unread mark",
+    "description": "Adds “Mark as unread” to a session row's menu and shows an unread dot until the session is opened again."
+  }
+}

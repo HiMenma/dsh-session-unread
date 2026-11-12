@@ -1,0 +1,44 @@
+{
+  "name": "@local/dsh-session-unread",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "author": "Yang",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HiMenma/dsh-session-unread.git"
+  },
+  "homepage": "https://github.com/HiMenma/dsh-session-unread#readme",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "bundle",
+    "sidebar",
+    "session",
+    "unread"
+  ],
+  "description": "Session menu action that marks a conversation unread, plus an unread dot on the sidebar row.",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-workspace"]
+    }
+  }
+}

@@ -1,0 +1,3 @@
+- insert:
+    - id: session-unread
+      name: '@local/dsh-session-unread'
